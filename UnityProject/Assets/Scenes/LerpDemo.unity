@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1372270546}
   pointB: {fileID: 828525618}
-  percent: 0
+  percent: -0.23
 --- !u!65 &978866455
 BoxCollider:
   m_ObjectHideFlags: 0

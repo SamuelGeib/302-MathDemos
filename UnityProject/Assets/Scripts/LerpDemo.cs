@@ -8,7 +8,7 @@ public class LerpDemo : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
 
-    [Range(0, 1)] //[] denotes attributes, range allows us to use a slider in the editor. Super fancy 
+    //[Range(0, 1)] //[] denotes attributes, range allows us to use a slider in the editor. Super fancy 
     public float percent = 0;
 
     void DoInterpolation()
@@ -18,11 +18,11 @@ public class LerpDemo : MonoBehaviour
         if (pointB == null) return; // Quit incase wither point isn't specified
 
         // lerp of position
-        Vector3 pos = Vector3.Lerp(pointA.position, pointB.position, percent);
+        Vector3 pos = AnimMath.Lerp(pointA.position, pointB.position, percent, false);
 
-        //lerp of rotation
+        // lerp of rotation
         // Rotation is always controlled by Quaternions
-        Quaternion rot = Quaternion.Lerp(pointA.rotation, pointB.rotation, percent);
+        Quaternion rot = AnimMath.Lerp(pointA.rotation, pointB.rotation, percent);
 
         // todo: set this object's position to the lerp result 
         transform.position = pos;
