@@ -50,15 +50,14 @@ public static class AnimMath
     }
 
     public static float Ease(float current, float target, float percentLeftAfter1Second, float dt) {
-        if (dt < 0) dt = Time.deltaTime;
+        //if (dt < 0) dt = Time.deltaTime;
         float p = 1 - Mathf.Pow(percentLeftAfter1Second, dt);
         return Lerp(current, target, p);
 
     }
 
     public static Vector3 Ease(Vector3 current, Vector3 target, float percentLeftAfter1Second, float dt = -1) {
-
-        if (dt < 0) dt = Time.deltaTime;
+        //if (dt < 0) dt = Time.deltaTime;
         float p = 1 - Mathf.Pow(percentLeftAfter1Second, Time.deltaTime);
         return Lerp(current, target, p);
 
